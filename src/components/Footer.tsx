@@ -5,13 +5,16 @@ const Footer = () => {
     <footer className="bg-primary border-t border-golden/20 py-12" id="inscricoes">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <h3 className="text-3xl md:text-4xl font-serif text-golden mb-8">
-            Projeto Recomeço
+          <h3 className="text-2xl font-serif text-golden mb-4">
+            Curso de Automaquiagem - Sirlene Franca
           </h3>
+          <p className="text-white/80 mb-6">
+            Transformando vidas através da beleza e autoestima
+          </p>
           
           <div className="mb-8">
             <p className="text-white/80 text-lg mb-4">
-              Próxima edição: <strong className="text-golden">14 de Maio de 2025</strong>
+              Próxima turma: <strong className="text-golden">25 de Agosto de 2025</strong>
             </p>
             <p className="text-white/60">
               Para mais informações e inscrições, entre em contato:
@@ -39,10 +42,10 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className="border-t border-golden/20 pt-8">
-            <p className="text-white/60 text-sm">
-              © 2024 Projeto Recomeço. Desenvolvido por Fran Amaral.
-            </p>
+          <div className="border-t border-golden/20 pt-8 text-center text-sm text-white/60 space-y-2">
+            <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
+            <p>Todo o conteúdo é de responsabilidade de Sirlene Franca.</p>
+            <p>© 2025 Sirlene Franca - Todos os direitos reservados</p>
           </div>
         </div>
       </div>

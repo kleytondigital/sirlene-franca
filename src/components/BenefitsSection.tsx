@@ -1,21 +1,21 @@
-import { Crown, Target, Users } from 'lucide-react';
+import { Heart, Star, Users } from 'lucide-react';
 
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: Crown,
-      title: "Posicione-se como autoridade",
-      description: "Desenvolva uma imagem que transmite credibilidade e expertise no seu segmento de atuação."
+      icon: Star,
+      title: "Técnicas Profissionais",
+      description: "Aprenda com 10 anos de experiência em maquiagem profissional e domine as técnicas que realmente funcionam."
     },
     {
-      icon: Target,
-      title: "Destaque suas características",
-      description: "Identifique e potencialize os diferenciais que fazem você único no mercado."
+      icon: Heart,
+      title: "Autoestima Elevada",
+      description: "Desperte sua confiança e beleza natural todos os dias com maquiagens que valorizam seus traços únicos."
     },
     {
       icon: Users,
-      title: "Atraia clientes qualificados",
-      description: "Construa uma presença que magnetiza o público ideal para o seu negócio."
+      title: "Método Simples",
+      description: "Passo a passo didático para qualquer nível de habilidade, do iniciante ao intermediário."
     }
   ];
 
@@ -24,10 +24,10 @@ const BenefitsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">
-            Transforme sua <span className="text-golden">Presença Profissional</span>
+            Transforme sua <span className="text-golden">Relação com a Beleza</span>
           </h2>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Três pilares fundamentais para construir uma imagem de autoridade no mercado
+            Três pilares fundamentais para dominar a arte da automaquiagem
           </p>
         </div>
         

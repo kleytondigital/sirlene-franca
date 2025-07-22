@@ -6,13 +6,13 @@ const LastEdition = () => {
     <section className="bg-primary py-16 lg:py-24">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4">
-          CONFIRA O QUE ACONTECEU NA{' '}
-          <span className="text-neon-yellow">ÚLTIMA EDIÇÃO</span>
+          CONFIRA O QUE AS ALUNAS ESTÃO{' '}
+          <span className="text-neon-yellow">FALANDO DO CURSO</span>
         </h2>
         
         <p className="text-white/80 text-lg mb-12 max-w-3xl mx-auto">
-          Veja os depoimentos e transformações reais de profissionais que participaram 
-          do evento e mudaram completamente sua presença no mercado.
+          Veja os depoimentos e transformações reais de mulheres que fizeram o curso 
+          e mudaram completamente sua relação com a beleza e autoestima.
         </p>
         
         <div className="relative max-w-4xl mx-auto">
@@ -26,10 +26,10 @@ const LastEdition = () => {
                 </div>
                 
                 <h3 className="text-2xl md:text-3xl font-serif text-white mb-2">
-                  Assista aos resultados
+                  Assista aos depoimentos
                 </h3>
                 <p className="text-white/80">
-                  Depoimentos exclusivos dos participantes
+                  Transformações reais das nossas alunas
                 </p>
               </div>
               
@@ -39,8 +39,8 @@ const LastEdition = () => {
           
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div className="bg-muted/30 p-6 rounded-lg border border-golden/20">
-              <div className="text-golden text-2xl font-bold mb-2">+150</div>
-              <div className="text-white/80">Profissionais transformados</div>
+              <div className="text-golden text-2xl font-bold mb-2">+500</div>
+              <div className="text-white/80">Alunas formadas</div>
             </div>
             
             <div className="bg-muted/30 p-6 rounded-lg border border-golden/20">

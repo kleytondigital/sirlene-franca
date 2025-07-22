@@ -11,22 +11,22 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif text-white mb-4 tracking-wide">
-            PRÓXIMA EDIÇÃO DO
+            CURSO DE
           </h1>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-golden mb-8 tracking-wider">
-            RECOMEÇO
+            AUTOMAQUIAGEM
           </h2>
           
           <div className="mb-8">
             <p className="text-lg md:text-xl text-white mb-6 opacity-90">
-              14 de Maio de 2025
+              25 de Agosto de 2025
             </p>
             <CountdownTimer />
           </div>
           
           <div className="mt-12">
             <p className="text-sm md:text-base text-white opacity-80 uppercase tracking-widest">
-              O evento que transforma profissionais em autoridades
+              Transforme sua autoestima através da beleza
             </p>
           </div>
         </div>

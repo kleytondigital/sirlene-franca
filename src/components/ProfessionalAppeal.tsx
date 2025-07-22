@@ -14,21 +14,21 @@ const ProfessionalAppeal = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-6 leading-tight">
-              ATENÇÃO <span className="text-golden">PROFISSIONAIS</span> E{' '}
-              <span className="text-golden">EMPRESAS!</span>
+              ATENÇÃO <span className="text-golden">MULHERES!</span>
             </h2>
             
             <div className="space-y-6 text-white/90 text-lg">
               <p>
-                Esta é uma <strong className="text-golden">oferta única</strong> para 
-                profissionais que querem se destacar no mercado e construir uma imagem 
-                de autoridade que atrai clientes qualificados.
+                Você sonha em se maquiar sozinha mas sempre desiste na primeira tentativa? 
+                Chegou a hora de aprender de verdade! Com <strong className="text-golden">Sirlene Franca</strong>, 
+                maquiadora profissional há mais de 10 anos, você vai dominar a arte da automaquiagem 
+                e elevar sua autoestima todos os dias.
               </p>
               
               <p>
-                O <strong className="text-golden font-serif">Recomeço</strong> é mais 
-                que um evento de fotografia. É uma experiência transformadora que vai 
-                reposicionar sua marca pessoal no mercado.
+                O <strong className="text-golden font-serif">Curso de Automaquiagem</strong> é mais 
+                que um curso online. É uma experiência transformadora que vai 
+                revolucionar sua relação com a beleza.
               </p>
               
               <div className="bg-black/30 p-6 rounded-lg border border-golden/20">
@@ -36,9 +36,9 @@ const ProfessionalAppeal = () => {
                   ✨ Transformação Garantida
                 </p>
                 <p className="text-sm">
-                  Saia do evento com uma nova identidade visual, posicionamento 
-                  estratégico e a confiança para se apresentar como a autoridade 
-                  que você é no seu segmento.
+                  Saia do curso sabendo se maquiar para qualquer ocasião, 
+                  com técnicas profissionais adaptadas para o dia a dia 
+                  e a confiança para se sentir linda sempre.
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ const ProfessionalAppeal = () => {
                 className="w-full md:w-auto"
               >
                 <Search className="w-5 h-5" />
-                Quero um Recomeço!
+                Quero me Inscrever!
               </Button>
             </div>
           </div>
@@ -61,7 +61,7 @@ const ProfessionalAppeal = () => {
               <div className="absolute inset-0 bg-gradient-gold opacity-20 rounded-lg transform rotate-3"></div>
               <img 
                 src="/lovable-uploads/b8a2318a-3d13-47ea-9487-de7d52981cf1.png"
-                alt="Profissional de sucesso"
+                alt="Mulher se maquiando"
                 className="relative w-full h-auto rounded-lg shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500"
               />
             </div>

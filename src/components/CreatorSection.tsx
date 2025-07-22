@@ -1,76 +1,58 @@
 import { Button } from './ui/button';
-import { Sparkles } from 'lucide-react';
-
 
 const CreatorSection = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section className="bg-primary py-16 lg:py-24" id="sobre">
+    <section className="bg-primary py-16 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-golden mb-4">
+            Conheça Sirlene Franca
+          </h2>
+        </div>
+        
+        <div className="grid lg:grid-cols-3 gap-12 items-center max-w-6xl mx-auto">
+          <div className="lg:col-span-1">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-gold opacity-20 rounded-lg transform -rotate-2"></div>
+              <div className="absolute inset-0 bg-gradient-gold opacity-20 rounded-lg transform -rotate-3"></div>
               <img 
                 src="/lovable-uploads/624a7cdd-5351-4961-81c6-1c66e6238993.png"
-                alt="Fran Amaral - Idealizadora do Projeto Recomeço"
+                alt="Sirlene Franca - Maquiadora Profissional"
                 className="relative w-full h-auto rounded-lg shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
           </div>
           
-          <div className="order-1 lg:order-2">
-            <div className="mb-8">
-              <p className="text-golden font-serif text-xl mb-2 italic">por</p>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">
-                Fran Amaral
-              </h2>
-            </div>
-            
-            <div className="space-y-6 text-white/90 text-lg leading-relaxed">
-              <p>
-                Depois de anos ajudando profissionais a se destacarem no mercado, 
-                percebi que a <strong className="text-golden">transformação real</strong> acontece 
-                quando alinhamos identidade, propósito e imagem.
+          <div className="lg:col-span-2">
+            <div className="mb-6">
+              <h3 className="text-2xl font-serif text-golden mb-4">Maquiadora Profissional Certificada</h3>
+              <p className="text-white/90 leading-relaxed mb-4">
+                Maquiadora profissional há mais de 10 anos, Sirlene Franca se destaca pela didática acessível, 
+                paixão pela beleza real e compromisso com a autoestima feminina.
               </p>
-              
-              <p>
-                O <strong className="text-golden font-serif">Recomeço</strong> nasceu da 
-                necessidade de criar um espaço onde profissionais pudessem 
-                <strong className="text-golden"> redescobrir seu poder</strong> e se 
-                posicionar como as autoridades que já são.
+              <p className="text-white/90 leading-relaxed mb-6">
+                Ao longo da sua carreira, já atendeu centenas de mulheres em produções especiais como noivas, 
+                eventos e ensaios, além de formar dezenas de alunas por meio de cursos presenciais e online.
               </p>
-              
-              <p>
-                Não é apenas sobre fotografia. É sobre <strong className="text-golden">
-                archetypo, estratégia e transformação</strong>. É sobre você assumir 
-                o protagonismo da sua própria história profissional.
-              </p>
-              
-              <blockquote className="border-l-4 border-golden pl-6 py-4 bg-muted/20 rounded-r-lg">
-                <p className="text-golden italic font-serif text-xl">
-                  "Sua imagem é sua primeira oportunidade de causar impacto. 
-                  Vamos fazer com que ela conte a história certa."
+              <div className="bg-black/30 p-4 rounded-lg border border-golden/20 mb-6">
+                <p className="text-golden font-semibold text-sm">
+                  🏆 Especialista em Técnicas de Automaquiagem
                 </p>
-              </blockquote>
+              </div>
             </div>
             
-            <div className="mt-8">
-              <Button 
-                variant="cta" 
-                size="xl"
-                onClick={() => scrollToSection('inscricoes')}
-                className="w-full md:w-auto"
-              >
-                <Sparkles className="w-5 h-5" />
-                Ative seu Poder
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              className="bg-golden hover:bg-golden/90 text-black font-semibold px-8 py-3 text-lg"
+            >
+              Quero Aprender com a Sirlene
+            </Button>
           </div>
+        </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-golden font-serif text-lg italic">
+            por Sirlene Franca
+          </p>
         </div>
       </div>
     </section>
