@@ -1,6 +1,6 @@
 import { Button } from './ui/button';
 import { Search } from 'lucide-react';
-import professionalWoman from '../assets/professional-woman.jpg';
+
 
 const ProfessionalAppeal = () => {
   const scrollToSection = (id: string) => {
@@ -60,7 +60,7 @@ const ProfessionalAppeal = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-gold opacity-20 rounded-lg transform rotate-3"></div>
               <img 
-                src={professionalWoman}
+                src="/lovable-uploads/b8a2318a-3d13-47ea-9487-de7d52981cf1.png"
                 alt="Profissional de sucesso"
                 className="relative w-full h-auto rounded-lg shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500"
               />

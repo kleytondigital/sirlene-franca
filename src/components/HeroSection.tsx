@@ -1,12 +1,11 @@
 import CountdownTimer from './CountdownTimer';
-import heroBackground from '../assets/hero-background.jpg';
 
 const HeroSection = () => {
   return (
     <section 
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${heroBackground})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(/lovable-uploads/432e74cd-d8da-4274-960c-8e5e4f116bb3.png)`
       }}
     >
       <div className="container mx-auto px-4 text-center">

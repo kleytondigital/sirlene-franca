@@ -1,6 +1,6 @@
 import { Button } from './ui/button';
 import { Sparkles } from 'lucide-react';
-import franAmaralPortrait from '../assets/fran-amaral-portrait.jpg';
+
 
 const CreatorSection = () => {
   const scrollToSection = (id: string) => {
@@ -16,7 +16,7 @@ const CreatorSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-gold opacity-20 rounded-lg transform -rotate-2"></div>
               <img 
-                src={franAmaralPortrait}
+                src="/lovable-uploads/624a7cdd-5351-4961-81c6-1c66e6238993.png"
                 alt="Fran Amaral - Idealizadora do Projeto Recomeço"
                 className="relative w-full h-auto rounded-lg shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-500"
               />
