@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 interface TimeLeft {
@@ -37,33 +38,33 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="flex gap-4 justify-center items-center text-white">
+    <div className="flex gap-2 md:gap-3 justify-center items-center text-white">
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold font-serif text-golden">
+        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-golden">
           {formatNumber(timeLeft.days)}
         </div>
-        <div className="text-sm uppercase tracking-wider">Dias</div>
+        <div className="text-xs uppercase tracking-wider">Dias</div>
       </div>
-      <div className="text-3xl md:text-5xl text-golden">:</div>
+      <div className="text-xl md:text-2xl lg:text-3xl text-golden">:</div>
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold font-serif text-golden">
+        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-golden">
           {formatNumber(timeLeft.hours)}
         </div>
-        <div className="text-sm uppercase tracking-wider">Horas</div>
+        <div className="text-xs uppercase tracking-wider">Horas</div>
       </div>
-      <div className="text-3xl md:text-5xl text-golden">:</div>
+      <div className="text-xl md:text-2xl lg:text-3xl text-golden">:</div>
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold font-serif text-golden">
+        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-golden">
           {formatNumber(timeLeft.minutes)}
         </div>
-        <div className="text-sm uppercase tracking-wider">Min</div>
+        <div className="text-xs uppercase tracking-wider">Min</div>
       </div>
-      <div className="text-3xl md:text-5xl text-golden">:</div>
+      <div className="text-xl md:text-2xl lg:text-3xl text-golden">:</div>
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold font-serif text-golden">
+        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-golden">
           {formatNumber(timeLeft.seconds)}
         </div>
-        <div className="text-sm uppercase tracking-wider">Seg</div>
+        <div className="text-xs uppercase tracking-wider">Seg</div>
       </div>
     </div>
   );

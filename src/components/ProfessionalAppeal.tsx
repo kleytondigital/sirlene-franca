@@ -1,11 +1,23 @@
+
 import { Button } from './ui/button';
 import { Search } from 'lucide-react';
-
+import { useAdmin } from '../contexts/AdminContext';
 
 const ProfessionalAppeal = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const { settings } = useAdmin();
+
+  const handleCTAClick = () => {
+    // Track Facebook Pixel event if configured
+    if (settings.facebookPixel && typeof window.fbq !== 'undefined') {
+      window.fbq('track', 'InitiateCheckout');
+    }
+    
+    if (settings.checkoutLink.startsWith('#')) {
+      const element = document.getElementById(settings.checkoutLink.substring(1));
+      element?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.open(settings.checkoutLink, '_blank');
+    }
   };
 
   return (
@@ -47,7 +59,7 @@ const ProfessionalAppeal = () => {
               <Button 
                 variant="cta" 
                 size="xl"
-                onClick={() => scrollToSection('inscricoes')}
+                onClick={handleCTAClick}
                 className="w-full md:w-auto"
               >
                 <Search className="w-5 h-5" />

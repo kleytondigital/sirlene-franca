@@ -1,7 +1,23 @@
+
 import { Play } from 'lucide-react';
 import { Button } from './ui/button';
+import { useAdmin } from '../contexts/AdminContext';
 
 const LastEdition = () => {
+  const { settings } = useAdmin();
+
+  const handleVideoClick = () => {
+    if (settings.vslVideoLink && settings.vslVideoLink !== '#') {
+      window.open(settings.vslVideoLink, '_blank');
+    }
+  };
+
+  const handleTestimonialsClick = () => {
+    if (settings.testimonialsLink && settings.testimonialsLink !== '#') {
+      window.open(settings.testimonialsLink, '_blank');
+    }
+  };
+
   return (
     <section className="bg-primary py-16 lg:py-24">
       <div className="container mx-auto px-4 text-center">
@@ -16,8 +32,11 @@ const LastEdition = () => {
         </p>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="aspect-video bg-gradient-dark rounded-xl overflow-hidden shadow-2xl border border-golden/20">
-            <div className="w-full h-full flex items-center justify-center relative group cursor-pointer">
+          <div 
+            className="aspect-video bg-gradient-dark rounded-xl overflow-hidden shadow-2xl border border-golden/20 cursor-pointer"
+            onClick={handleVideoClick}
+          >
+            <div className="w-full h-full flex items-center justify-center relative group">
               <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300"></div>
               
               <div className="relative z-10 text-center">
@@ -56,7 +75,7 @@ const LastEdition = () => {
         </div>
         
         <div className="mt-12">
-          <Button variant="hero" size="xl">
+          <Button variant="hero" size="xl" onClick={handleTestimonialsClick}>
             Ver Mais Depoimentos
           </Button>
         </div>

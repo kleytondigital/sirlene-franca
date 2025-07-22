@@ -1,6 +1,24 @@
+
 import { Button } from './ui/button';
+import { useAdmin } from '../contexts/AdminContext';
 
 const CreatorSection = () => {
+  const { settings } = useAdmin();
+
+  const handleCTAClick = () => {
+    // Track Facebook Pixel event if configured
+    if (settings.facebookPixel && typeof window.fbq !== 'undefined') {
+      window.fbq('track', 'Lead');
+    }
+    
+    if (settings.checkoutLink.startsWith('#')) {
+      const element = document.getElementById(settings.checkoutLink.substring(1));
+      element?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.open(settings.checkoutLink, '_blank');
+    }
+  };
+
   return (
     <section className="bg-primary py-16 lg:py-24">
       <div className="container mx-auto px-4">
@@ -43,6 +61,7 @@ const CreatorSection = () => {
             <Button 
               size="lg" 
               className="bg-golden hover:bg-golden/90 text-black font-semibold px-8 py-3 text-lg"
+              onClick={handleCTAClick}
             >
               Quero Aprender com a Sirlene
             </Button>
