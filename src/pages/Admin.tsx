@@ -7,12 +7,14 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Textarea } from '../components/ui/textarea';
-import { ArrowLeft, Save } from 'lucide-react';
+import { ArrowLeft, Save, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Admin = () => {
   const { settings, updateSettings } = useAdmin();
   const [formData, setFormData] = useState(settings);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
 
   const handleSave = () => {
     updateSettings(formData);
@@ -22,6 +24,57 @@ const Admin = () => {
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === 'placar083133G') {
+      setIsAuthenticated(true);
+      setPassword('');
+    } else {
+      alert('Senha incorreta!');
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-primary flex items-center justify-center p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader>
+            <CardTitle className="text-golden text-center">
+              <Lock className="w-8 h-8 mx-auto mb-2" />
+              Acesso Administrativo
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div>
+                <Label htmlFor="password">Senha</Label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Digite a senha de acesso"
+                  required
+                />
+              </div>
+              <Button type="submit" className="w-full">
+                Entrar
+              </Button>
+            </form>
+            <div className="mt-4 text-center">
+              <Link to="/">
+                <Button variant="outline" size="sm">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Voltar para Landing Page
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-primary p-4">
