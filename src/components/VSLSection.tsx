@@ -8,7 +8,13 @@ const VSLSection = () => {
   const [showControls, setShowControls] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  const isYouTube =
+    settings.vslVideoLink.includes('youtube.com') ||
+    settings.vslVideoLink.includes('youtu.be');
+
   const handlePlayPause = async () => {
+    if (isYouTube) return; // Evita controlar vídeos do YouTube
+
     if (videoRef.current) {
       try {
         if (isPlaying) {
@@ -24,12 +30,9 @@ const VSLSection = () => {
     }
   };
 
-  const isYouTube = settings.vslVideoLink.includes('youtube.com') || settings.vslVideoLink.includes('youtu.be');
-
-  // Se não tem link configurado, não renderiza a seção
-  if (!settings.vslVideoLink)  {
+  // Se não tem link configurado, define um padrão (opcional)
+  if (!settings.vslVideoLink) {
     settings.vslVideoLink = 'https://www.youtube.com/embed/D0CyyQo3sPU?si=wSjv4eNeaQubkMS5';
-    
   }
 
   return (
@@ -45,7 +48,7 @@ const VSLSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div 
+          <div
             className="relative bg-black rounded-lg overflow-hidden shadow-2xl aspect-video cursor-pointer group"
             onMouseEnter={() => setShowControls(true)}
             onMouseLeave={() => setShowControls(false)}
@@ -72,9 +75,9 @@ const VSLSection = () => {
                   poster="/lovable-uploads/432e74cd-d8da-4274-960c-8e5e4f116bb3.png"
                   preload="metadata"
                 />
-                
-                {/* Controles customizados */}
-                <div 
+
+                {/* Controles customizados (somente se não for YouTube) */}
+                <div
                   className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 ${
                     showControls ? 'opacity-100' : 'opacity-0'
                   }`}
@@ -91,7 +94,6 @@ const VSLSection = () => {
                   </button>
                 </div>
 
-                {/* Indicador de play quando pausado */}
                 {!isPlaying && !showControls && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-golden/90 rounded-full p-4">
