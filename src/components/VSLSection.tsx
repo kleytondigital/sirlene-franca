@@ -52,7 +52,7 @@ const VSLSection = () => {
           >
             {isYouTube ? (
               <iframe
-                src={`${settings.vslVideoLink}${settings.vslVideoLink.includes('?') ? '&' : '?'}modestbranding=1&showinfo=0&rel=0&controls=0&disablekb=1&iv_load_policy=3&cc_load_policy=0&fs=0`}
+                src={`${settings.vslVideoLink}${settings.vslVideoLink.includes('?') ? '&' : '?'}modestbranding=1&showinfo=0&rel=0&controls=1&disablekb=0&iv_load_policy=3&cc_load_policy=0&fs=1&enablejsapi=1`}
                 className="w-full h-full"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
