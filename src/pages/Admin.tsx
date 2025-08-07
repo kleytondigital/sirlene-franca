@@ -139,8 +139,11 @@ const Admin = () => {
                     id="vslVideoLink"
                     value={formData.vslVideoLink}
                     onChange={(e) => handleInputChange('vslVideoLink', e.target.value)}
-                    placeholder="https://youtube.com/watch?v=..."
+                    placeholder="https://youtube.com/embed/video-id ou /path/video.mp4"
                   />
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Suporta YouTube (embed), arquivos MP4/MOV hospedados ou YouTube privado
+                  </p>
                 </div>
                 <div>
                   <Label htmlFor="testimonialsLink">Link dos Depoimentos</Label>
