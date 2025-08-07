@@ -52,10 +52,10 @@ const VSLSection = () => {
           >
             {isYouTube ? (
               <iframe
-                src={`${settings.vslVideoLink}${settings.vslVideoLink.includes('?') ? '&' : '?'}modestbranding=1&showinfo=0&rel=0&controls=1&disablekb=0&iv_load_policy=3&cc_load_policy=0&fs=1&enablejsapi=1`}
+                src={`${settings.vslVideoLink}${settings.vslVideoLink.includes('?') ? '&' : '?'}autoplay=0&mute=0&rel=0&modestbranding=1`}
                 className="w-full h-full"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 title="VSL Video"
               />
