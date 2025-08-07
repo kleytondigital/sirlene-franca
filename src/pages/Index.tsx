@@ -1,4 +1,5 @@
 import HeroSection from '../components/HeroSection';
+import VSLSection from '../components/VSLSection';
 import ProfessionalAppeal from '../components/ProfessionalAppeal';
 import BenefitsSection from '../components/BenefitsSection';
 import WhyRecomeco from '../components/WhyRecomeco';
@@ -10,6 +11,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <VSLSection />
       <ProfessionalAppeal />
       <BenefitsSection />
       <WhyRecomeco />
