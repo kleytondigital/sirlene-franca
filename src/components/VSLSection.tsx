@@ -22,7 +22,7 @@ const VSLSection = () => {
   const isYouTube = settings.vslVideoLink.includes('youtube.com') || settings.vslVideoLink.includes('youtu.be');
 
   // Se não tem link configurado, não renderiza a seção
-  if (!settings.vslVideoLink || settings.vslVideoLink === '#') {
+  if (!settings.vslVideoLink || settings.vslVideoLink === 'https://www.youtube.com/embed/D0CyyQo3sPU?si=wSjv4eNeaQubkMS5') {
     return null;
   }
 
