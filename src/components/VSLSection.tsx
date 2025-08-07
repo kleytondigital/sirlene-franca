@@ -8,14 +8,19 @@ const VSLSection = () => {
   const [showControls, setShowControls] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handlePlayPause = () => {
+  const handlePlayPause = async () => {
     if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
+      try {
+        if (isPlaying) {
+          videoRef.current.pause();
+          setIsPlaying(false);
+        } else {
+          await videoRef.current.play();
+          setIsPlaying(true);
+        }
+      } catch (error) {
+        console.error('Erro ao reproduzir vídeo:', error);
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
@@ -62,8 +67,10 @@ const VSLSection = () => {
                   src={settings.vslVideoLink}
                   onPlay={() => setIsPlaying(true)}
                   onPause={() => setIsPlaying(false)}
-                  onClick={handlePlayPause}
+                  onLoadedMetadata={() => console.log('Vídeo carregado')}
+                  onError={(e) => console.error('Erro no vídeo:', e)}
                   poster="/lovable-uploads/432e74cd-d8da-4274-960c-8e5e4f116bb3.png"
+                  preload="metadata"
                 />
                 
                 {/* Controles customizados */}
