@@ -4,38 +4,55 @@ import { useAdmin } from '../contexts/AdminContext';
 
 const FacebookPixel = () => {
   const { settings } = useAdmin();
+  const pixelId = settings.facebookPixel;
 
   useEffect(() => {
-    if (!settings.facebookPixel) return;
+    if (!pixelId) return;
 
-    // Inject Facebook Pixel script
-    const script = document.createElement('script');
-    script.innerHTML = `
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '${settings.facebookPixel}');
-      fbq('track', 'PageView');
-    `;
-    document.head.appendChild(script);
+    // Verifica se o pixel já foi carregado
+    if (window.fbq) return;
 
-    // Add noscript tag
-    const noscript = document.createElement('noscript');
-    noscript.innerHTML = `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${settings.facebookPixel}&ev=PageView&noscript=1" />`;
-    document.body.appendChild(noscript);
+    // Adiciona o script de forma segura
+    !(function (f: any, b: Document, e: string, v: string, n?: any, t?: HTMLScriptElement, s?: Node) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = true;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s?.parentNode?.insertBefore(t, s);
+    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-    return () => {
-      document.head.removeChild(script);
-      document.body.removeChild(noscript);
-    };
-  }, [settings.facebookPixel]);
+    window.fbq('init', pixelId);
+    window.fbq('track', 'PageView');
+  }, [pixelId]);
 
-  return null;
+  // noscript para fallback
+  return (
+    <>
+      {pixelId && (
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}
+            alt=""
+          />
+        </noscript>
+      )}
+    </>
+  );
 };
 
 export default FacebookPixel;
+
