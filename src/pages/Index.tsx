@@ -14,6 +14,7 @@ const Index = () => {
       <VSLSection />
       <ProfessionalAppeal />
       <BenefitsSection />
+      <WhyRecomeco />
       <CreatorSection />
       <Footer />
     </div>
