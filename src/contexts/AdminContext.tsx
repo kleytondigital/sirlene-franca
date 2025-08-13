@@ -20,7 +20,7 @@ interface AdminContextType {
 const defaultSettings: AdminSettings = {
   fontFamily: 'Montserrat',
   checkoutLink: 'https://pay.kirvano.com/84d6ae17-c188-4c0c-a707-46ed0e92a7f9',
-  vslVideoLink: 'https://www.youtube.com/embed/D0CyyQo3sPU?si=wSjv4eNeaQubkMS5',
+  vslVideoLink: 'https://www.youtube.com/embed/jNVKwHV72kU?si=Yg76ngCXqUkO4eGq',
   testimonialsLink: '#',
   instagramLink: 'https://www.instagram.com/sirlenefrancamakeup/',
   linkedinLink: '#',
