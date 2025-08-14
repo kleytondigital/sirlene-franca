@@ -18,12 +18,7 @@ const HeroSection = () => {
             AUTOMAQUIAGEM
           </h2>
           
-          <div className="mb-6">
-            <p className="text-base md:text-lg text-white mb-4 opacity-90">
-              25 de Agosto de 2025
-            </p>
-            <CountdownTimer />
-          </div>
+ 
           
           <div className="mt-8">
             <p className="text-xs md:text-sm text-white opacity-80 uppercase tracking-widest">
